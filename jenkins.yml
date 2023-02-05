@@ -1,0 +1,25 @@
+jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: admin
+          password: "${JENKINS_PASS}"
+          fullName: "Jenkins Admin"
+          email: "admin@example.com"
+
+  authorizationStrategy:
+    fullControlOnceLoggedIn:
+      allowAnonymousRead: false
+
+  systemMessage: "Jenkins instance for production builds."
+
+  numExecutors: 2
+
+  properties:
+    - authorizationStrategy:
+        fullControlOnceLoggedIn:
+          allowAnonymousRead: false
+    - securityRealm:
+        local:
+          allowsSignup: false
