@@ -1,6 +1,6 @@
 #!/bin/bash
 git clone https://github.com/omriv88/deploy-jenkins-jobs.git  
-cp -r -f deploy-jenkins-jobs1/* ./
+cp -r -f deploy-jenkins-jobs/* ./
 
 
 while true; do
