@@ -1,4 +1,5 @@
 #!/bin/bash
+sleep 25s
 my_ip=$(curl http://checkip.amazonaws.com)
 curl --insecure http://$my_ip:8080/jnlpJars/jenkins-cli.jar --output jenkins-cli.jar
 chmod +x jenkins-cli.jar
