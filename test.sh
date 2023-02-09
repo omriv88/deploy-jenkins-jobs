@@ -1,6 +1,6 @@
 #!/bin/bash
-git clone https://github.com/omriv88/deploy-jenkins-jobs.git
-cp -r -f /deploy-jenkins-jobs/* ./
+#git clone https://github.com/omriv88/deploy-jenkins-jobs.git
+#cp -r -f /deploy-jenkins-jobs/* ./
 my_ip=$(curl http://checkip.amazonaws.com)
 sleep 25s
 curl --insecure http://$my_ip:8080/jnlpJars/jenkins-cli.jar --output jenkins-cli.jar
