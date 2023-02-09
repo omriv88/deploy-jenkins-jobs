@@ -4,8 +4,8 @@ cp -r -f deploy-jenkins-jobs/* ./
 
 
 while true; do
-#my_ip=$(curl http://checkip.amazonaws.com)
-  url="54.160.65.219:8080"
+my_ip=$(curl http://checkip.amazonaws.com)
+  url="$my_ip:8080"
   response_code=$(curl -s -o /dev/null -w "%{http_code}" $url)
   if [ $response_code -eq 200 ]; then
     bash ./test.sh
