@@ -9,6 +9,7 @@ my_ip=$(curl http://checkip.amazonaws.com)
   response_code=$(curl -s -o /dev/null -w "%{http_code}" $url)
   if [ $response_code -eq 200 ]; then
     bash ./test.sh
+    exit 0
   else
     echo "Error: URL is not working. Response code: $response_code"
   fi
